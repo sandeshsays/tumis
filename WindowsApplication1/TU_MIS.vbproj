@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{923D6066-A7F9-4AE8-92A5-1937183623F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TU_MIS.LoginForm1</StartupObject>
+    <RootNamespace>TU_MIS</RootNamespace>
+    <AssemblyName>TU_MIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TU_MIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TU_MIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Dbo_PassedStudents.vb" />
+    <Compile Include="Business\Dbo_Appointments.vb" />
+    <Compile Include="Business\Dbo_Staff.vb" />
+    <Compile Include="Business\Dbo_Teachers.vb" />
+    <Compile Include="common.vb" />
+    <Compile Include="DataGridViewPrinter.vb" />
+    <Compile Include="Data\Dbo_PassedStudentsDB.vb" />
+    <Compile Include="Data\Dbo_AppointmentsDB.vb" />
+    <Compile Include="Data\Dbo_StaffDB.vb" />
+    <Compile Include="Data\Dbo_TeachersDB.vb" />
+    <Compile Include="Data\tudataDB.vb" />
+    <Compile Include="modCommon.vb" />
+    <Compile Include="Presentation\frm_FacultyRetireList.Designer.vb">
+      <DependentUpon>frm_FacultyRetireList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_FacultyRetireList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_FacultyOverview.Designer.vb">
+      <DependentUpon>frm_FacultyOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_FacultyOverview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Frm_Count.Designer.vb">
+      <DependentUpon>Frm_Count.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Frm_Count.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ImportExcel.Designer.vb">
+      <DependentUpon>frm_ImportExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ImportExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ListOfTeachers.Designer.vb">
+      <DependentUpon>frm_ListOfTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ListOfTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DBConfig.Designer.vb">
+      <DependentUpon>DBConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DBConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_Appointments.Designer.vb">
+      <DependentUpon>frm_Appointments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_Appointments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_AppointmentsAdmin.Designer.vb">
+      <DependentUpon>frm_AppointmentsAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_AppointmentsAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_College.Designer.vb">
+      <DependentUpon>frm_College.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_College.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ListColleges.Designer.vb">
+      <DependentUpon>frm_ListColleges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ListColleges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ListStaff.Designer.vb">
+      <DependentUpon>frm_ListStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ListStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ListTeachers.Designer.vb">
+      <DependentUpon>frm_ListTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ListTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_CollegeOverview.Designer.vb">
+      <DependentUpon>frm_CollegeOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_CollegeOverview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_PassedStudents.Designer.vb">
+      <DependentUpon>frm_PassedStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_PassedStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_Reports.Designer.vb">
+      <DependentUpon>frm_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_RetireList.Designer.vb">
+      <DependentUpon>frm_RetireList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_RetireList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_Retirement.Designer.vb">
+      <DependentUpon>frm_Retirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_Retirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_StaffDetails.Designer.vb">
+      <DependentUpon>frm_StaffDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_StaffDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentation\frm_StdCountSem.Designer.vb">
+      <DependentUpon>frm_StdCountSem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_StdCountSem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_StdCountYear.Designer.vb">
+      <DependentUpon>frm_StdCountYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_StdCountYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_TeacherDetails.Designer.vb">
+      <DependentUpon>frm_TeacherDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_TeacherDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_TeacherMF.Designer.vb">
+      <DependentUpon>frm_TeacherMF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_TeacherMF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_Users.Designer.vb">
+      <DependentUpon>frm_Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frm_ViewAll.Designer.vb">
+      <DependentUpon>frm_ViewAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frm_ViewAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tudataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tudataDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentation\frm_FacultyRetireList.resx">
+      <DependentUpon>frm_FacultyRetireList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_FacultyOverview.resx">
+      <DependentUpon>frm_FacultyOverview.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Frm_Count.resx">
+      <DependentUpon>Frm_Count.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ImportExcel.resx">
+      <DependentUpon>frm_ImportExcel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ListOfTeachers.resx">
+      <DependentUpon>frm_ListOfTeachers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DBConfig.resx">
+      <DependentUpon>DBConfig.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_Appointments.resx">
+      <DependentUpon>frm_Appointments.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_AppointmentsAdmin.resx">
+      <DependentUpon>frm_AppointmentsAdmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_College.resx">
+      <DependentUpon>frm_College.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ListColleges.resx">
+      <DependentUpon>frm_ListColleges.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ListStaff.resx">
+      <DependentUpon>frm_ListStaff.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ListTeachers.resx">
+      <DependentUpon>frm_ListTeachers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_CollegeOverview.resx">
+      <DependentUpon>frm_CollegeOverview.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_PassedStudents.resx">
+      <DependentUpon>frm_PassedStudents.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_Reports.resx">
+      <DependentUpon>frm_Reports.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_RetireList.resx">
+      <DependentUpon>frm_RetireList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_Retirement.resx">
+      <DependentUpon>frm_Retirement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_StaffDetails.resx">
+      <DependentUpon>frm_StaffDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_StdCountSem.resx">
+      <DependentUpon>frm_StdCountSem.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_StdCountYear.resx">
+      <DependentUpon>frm_StdCountYear.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_TeacherDetails.resx">
+      <DependentUpon>frm_TeacherDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_TeacherMF.resx">
+      <DependentUpon>frm_TeacherMF.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_Users.resx">
+      <DependentUpon>frm_Users.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frm_ViewAll.resx">
+      <DependentUpon>frm_ViewAll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="tudataDataSet.xsc">
+      <DependentUpon>tudataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tudataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tudataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tudataDataSet.xss">
+      <DependentUpon>tudataDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
